@@ -2,7 +2,7 @@ $darkest-color: {{ .Site.Params.style.darkestColor | default "#15181c" }};
 $dark-color: {{ .Site.Params.style.darkColor | default "#22262b" }};
 $light-color: {{ .Site.Params.style.lightColor | default "#b0b4b8" }};
 $lightest-color: {{ .Site.Params.style.lightestColor | default "#ffffff" }};
-$primary-color: {{ .Site.Params.style.primaryColor | default "##0011ff" }};
+$primary-color: {{ .Site.Params.style.primaryColor | default "#0011ff" }};
 
 @import 'base';
 
