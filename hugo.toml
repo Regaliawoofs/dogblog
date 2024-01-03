@@ -1,4 +1,4 @@
-baseURL = 'http://barkblog.pages.dev'
+baseURL = 'http://dogblog.pages.dev'
 languageCode = 'en-us'
 title = 'BarkBlog'
 theme = 'hugo-theme-m10c'
