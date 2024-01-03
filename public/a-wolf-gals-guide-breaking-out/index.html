@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title> // BarkBlog</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.121.1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/main.min.5b1fcc8902588589c4767187402a3c29f8b8d7a6fdef6d9f8f77045bb0d14fee.css" />
+    
+
+    
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="AWGG - Breaking Out Of Jail
+So, you end up in a shell, and you realize you&rsquo;re stuck in jail. What do you do now? You break out of course!
+Step 1: Enumeration
+The first thing you&rsquo;ll want to do is basic enumeration. Start finding what binaries you have access to while &ldquo;locked up&rdquo;. At the very LEAST you&rsquo;ll have access to shell one-liners, but any compilers, interpreters, or packages for other languages (gcc, python, lua, node, etc."/>
+
+    <meta property="og:title" content="" />
+<meta property="og:description" content="AWGG - Breaking Out Of Jail
+So, you end up in a shell, and you realize you&rsquo;re stuck in jail. What do you do now? You break out of course!
+Step 1: Enumeration
+The first thing you&rsquo;ll want to do is basic enumeration. Start finding what binaries you have access to while &ldquo;locked up&rdquo;. At the very LEAST you&rsquo;ll have access to shell one-liners, but any compilers, interpreters, or packages for other languages (gcc, python, lua, node, etc." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://barkblog.pages.dev/a-wolf-gals-guide-breaking-out/" /><meta property="article:section" content="" />
+
+
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="http://barkblog.pages.dev"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <span class="app-header-title">BarkBlog</span>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title"></h1>
+    </header>
+    <div class="post-content">
+      <p><strong>AWGG - Breaking Out Of Jail</strong></p>
+<p>So, you end up in a shell, and you realize you&rsquo;re stuck in jail. What do you do now?
+<em>You break out of course!</em></p>
+<p><strong>Step 1: Enumeration</strong></p>
+<p>The first thing you&rsquo;ll want to do is basic enumeration. Start finding what binaries you have access to while &ldquo;locked up&rdquo;. At the very LEAST you&rsquo;ll have access to shell one-liners, but any compilers,  interpreters, or packages for other languages (gcc, python, lua, node, etc.) are a massive bonus.</p>
+<hr>
+<p><strong>Step 2: Permissions Within the chroot Environment</strong></p>
+<p>The ability to read (and more importantly) write files in the chroot will give you a good idea of what you&rsquo;ll be able to get away with as you&rsquo;re trying to escape. Test the waters with <code>touch</code> or <code>vi</code> or if you&rsquo;ve got them, <code>vim</code> or <code>nano</code>.</p>
+<hr>
+<p><strong>Step 3:Theory</strong></p>
+<p><img src="https://securityqueens.co.uk/wp-content/uploads/2020/04/Chroot-1.png" alt="Diagram of a basic chroot"></p>
+<p>Breaking out of the sandbox and onto the root filesystem of the box is our goal, and to achieve this, we simply need to spawn a shell outside of our sandbox.</p>
+<hr>
+<p><strong>Step 4: Practice</strong></p>
+<p>Here are several methods of chroot escapes, using very common binaries found enabled in chroot environments. These will work regardless of having write permissions in the chroot.</p>
+<ul>
+<li><strong>awk</strong></li>
+</ul>
+<pre tabindex="0"><code>awk &#39;BEGIN {system(&#34;/bin/sh&#34;)}&#39;
+</code></pre><ul>
+<li><strong>vi</strong></li>
+</ul>
+<pre tabindex="0"><code>vi -c &#39;:!/bin/sh&#39; /dev/null
+</code></pre><ul>
+<li><strong>more</strong></li>
+</ul>
+<pre tabindex="0"><code>TERM= more /etc/profile
+!/bin/sh
+</code></pre><ul>
+<li><strong>find</strong></li>
+</ul>
+<pre tabindex="0"><code>find . -exec /bin/sh \; -quit
+</code></pre><hr>
+<p><strong>Part 4a: Sudo is your best friend</strong></p>
+<p>Many, many binaries that require elevated permissions will ask users to utilize <code>sudo</code> to elevate permissions. If you have access to use <code>sudo</code> (rare, but still extremely effective). We can utilize the privileges gained by <code>sudo</code>, and use common binary flags to gain privileged shells, and by proxy, execution as root in the sandbox, allowing us to jump out easily into the main filesystem, and start enumeration from there.</p>
+<p><strong>Extra Resources</strong></p>
+<p>GTFOBins - Emilio Pinna and Andrea Cardaci&rsquo;s collaborative project that lists many privilege escalation opportunities presented by often standard binaries in linux images. (<a href="https://gtfobins.github.io/">https://gtfobins.github.io/</a>)</p>
+<hr>
+<p><strong>DISCLAIMER: I am not responsible for any damage that may come to systems these techniques may be used on. I am also not responsible for making sure your target machines are owned by you, or are allowed to be tested by the machine&rsquo;s owner. You should follow proper due diligence in assuring your targets are within scope.</strong></p>
+<p><em>With that said, Happy Hacking!</em></p>
+<p>-RW</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

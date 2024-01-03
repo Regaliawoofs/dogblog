@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BarkBlog</title>
+    <link>http://barkblog.pages.dev/</link>
+    <description>Recent content on BarkBlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://barkblog.pages.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://barkblog.pages.dev/a-wolf-gals-guide-breaking-out/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://barkblog.pages.dev/a-wolf-gals-guide-breaking-out/</guid>
+      <description>AWGG - Breaking Out Of Jail&#xA;So, you end up in a shell, and you realize you&amp;rsquo;re stuck in jail. What do you do now? You break out of course!&#xA;Step 1: Enumeration&#xA;The first thing you&amp;rsquo;ll want to do is basic enumeration. Start finding what binaries you have access to while &amp;ldquo;locked up&amp;rdquo;. At the very LEAST you&amp;rsquo;ll have access to shell one-liners, but any compilers, interpreters, or packages for other languages (gcc, python, lua, node, etc.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://barkblog.pages.dev/a-wolf-gals-guide-rf-hacking-recommendations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://barkblog.pages.dev/a-wolf-gals-guide-rf-hacking-recommendations/</guid>
+      <description>A Wolf Gal&amp;rsquo;s &amp;ldquo;Getting Started&amp;rdquo; Guide to RF Hacking for Dummies:&#xA;More and more people are wondering where I get my kit from, especially people wanting to break into infosec, so I&amp;rsquo;m putting this together to hopefully give some basic recommendations for intro wireless pentesting equipment. This is NOT a comprehensive list, nor is it the be-all-end-all of equipment either, but rather some tools I&amp;rsquo;ve used in my day-to-day doing wireless audits.</description>
+    </item>
+  </channel>
+</rss>
