@@ -11,7 +11,7 @@ My name is Rey, and this blog is about my life experiences in tech. Many posts w
 
 Here are a few of my socials that I'm most active on if you want to keep up with me!
 
-- **[BlueSky](https://bsky.app/profile/reywoofs.bsky.social)** 
+- **[BlueSky](https://bsky.app/profile/skypuppysec.bsky.social)** 
 - [**Mastodon**](https://infosec.exchange/@Regalia_woofs) 
 - [**Telegram**](https://t.me/Regalia_woofs)
 
